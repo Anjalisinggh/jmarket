@@ -6,6 +6,9 @@ import ExecutionSection from "@/components/homeSection/ExecutionSection";
 import Disclaimer from "@/components/homeSection/disclaimer";
 import AccountOpening from "@/components/homeSection/AccountOpening";
 import FNQSection from "@/components/homeSection/fnq";
+import MarketInfo from "@/components/homeSection/MarketInfo";
+import Support from "@/components/homeSection/Support";
+import News from "@/components/homeSection/News";
 export default function Home() {
   return (
     <div>
@@ -17,6 +20,9 @@ export default function Home() {
       <Disclaimer />
       <AccountOpening />
       <FNQSection />
+      <MarketInfo />
+      <Support />
+      <News />
     </div>
   )
 }
