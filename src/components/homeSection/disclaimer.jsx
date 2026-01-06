@@ -1,10 +1,10 @@
 export default function Disclaimer() {
   return (
-    <div className="px-40 pt-5 pb-5 bg-white">
-      <div className="max-w-6xl mx-auto space-y-8 text-[14px] leading-[1.8] text-[#888] font-inter">
-        
+    <div className="px-40 pb-5 bg-white">
+      <div className="max-w-6xl mx-auto space-y-8 text-[14px] leading-[18px] text-[#797979] font-inter font-[500]">
+
         <div className="flex gap-4">
-          <span className=" flex-shrink-0 text-[#C1C1C1] text-[18px]">【重要】</span>
+          <span className=" flex-shrink-0 text-[#797979] text-[18px]">【重要】</span>
           <div className="space-y-1 text-[14px] text-[#797979]">
             <p>本ウェブサイトは日本居住者を対象としたものではありません。</p>
             <p>CFDは複雑な金融商品であり、レバレッジの影響により急速に資金を失う高いリスクを伴います。取引前にリスク開示をよくお読みください。</p>

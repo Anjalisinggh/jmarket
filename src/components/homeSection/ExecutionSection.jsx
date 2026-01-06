@@ -1,10 +1,10 @@
 export default function ExecutionSection() {
     return (
         <div className="px-40 py-10 pb-5 pt-5 bg-white">
-            <div className="bg-[#F8F9FA] rounded-2xl p-16 flex items-center justify-between overflow-hidden relative">
+            <div className="bg-[#F8F9FA] rounded-2xl flex items-center justify-between">
 
                 {/* Left Column - 60% width */}
-                <div className="w-[60%] z-10 ">
+                <div className="w-[62%] p-14">
                     <div className="relative mb-8 inline-block">
                         {/* Heading Text */}
                         <h3 className="relative z-10 text-[28px] font-bold leading-tight text-[#4C4C4C]">
@@ -43,15 +43,13 @@ export default function ExecutionSection() {
                     </div>
                 </div>
 
-                {/* Right Column - 40% width */}
-                <div className="w-[40%] -pr-10 -mr-15 flex justify-end ">
+                <div className="w-[38%] h-full">
                     <img
                         src="/images/trading.png"
                         alt="Desktop Platform"
-                        className="w-full h-auto "
+                        className="h-full"
                     />
                 </div>
-
             </div>
         </div>
     );

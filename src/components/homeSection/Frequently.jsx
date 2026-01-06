@@ -31,27 +31,24 @@ export default function Frequently() {
   };
 
   return (
-    <div className="bg-white px-6 py-20 pt-15 pb-5 font-sans text-[#333333] ">
+    <div className="bg-white px-6 py-20 pt-15 mb-20 font-sans text-[#333333]">
       <div className="max-w-5xl mx-auto">
         {/* Main Title */}
         <h2 className="text-[27px] font-bold -mb-2 ">よくあるご質問</h2>
 
         <div >
           {faqData.map((item, index) => (
-            <div key={index} className="border-b border-gray-300 last:border-b-0">
+            <div key={index} className="border-b border-[#9d9d9d] last:border-b-0">
               <button
                 onClick={() => toggleAccordion(index)}
-                className="w-full py-8 flex justify-between items-center text-left hover:bg-gray-50 transition-colors px-2"
+                className="w-full py-5 font-inter flex justify-between items-center text-left hover:bg-gray-50 transition-colors px-2"
               >
-                <span className="text-[20px]  font-bold leading-tight">
+                <span className="text-[20px] font-bold leading-tight">
                   {item.question}
                 </span>
-                {/* Only show arrows for items that look like accordions in the design */}
-                {index >= 2 && (
-                  <ChevronDown 
-                    className={`w-6 h-6 transition-transform duration-300 ${openIndex === index ? 'rotate-180' : ''}`} 
-                  />
-                )}
+                <ChevronDown 
+                  className={`w-6 h-6 transition-transform duration-300 ${openIndex === index ? 'rotate-180' : ''}`} 
+                />
               </button>
 
               {/* Accordion Content */}
