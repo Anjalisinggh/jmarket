@@ -43,28 +43,16 @@ export default function WhyChoose() {
                     <div>
                         <h3 className="text-[28px] font-bold leading-relaxed mb-6 text-[#4C4C4C]">
                             <span className="relative inline-block">
-                                優れた約定スピードと安定した
-                                <svg
-                                    className="absolute -bottom-2 left-0 w-full h-[15px] z-0 opacity-90"
-                                    viewBox="0 0 218 16"
-                                    fill="none"
-                                    preserveAspectRatio="none"
-                                    xmlns="http://www.w3.org/2000/svg"
-                                >
-                                    <path d="M0.5 8C30.5 4.5 180.5 1.5 217.5 7.5C187.5 11.5 37.5 14.5 0.5 8Z" fill="#62FF00" />
-                                </svg>
+                                <span className="z-50 relative">
+                                    優れた約定スピードと安定した
+                                </span>
+                                <img src="/icons/detailline.svg" alt="whychoose1" className="absolute bottom-[6px] left-0 w-full h-[15px] z-0 opacity-90" />
                             </span><br />
                             <span className="relative inline-block">
-                                取引条件で平日24時間取引可能。
-                                <svg
-                                    className="absolute -bottom-2 left-0 w-full h-[15px] z-0 opacity-90"
-                                    viewBox="0 0 218 16"
-                                    fill="none"
-                                    preserveAspectRatio="none"
-                                    xmlns="http://www.w3.org/2000/svg"
-                                >
-                                    <path d="M0.5 8C30.5 4.5 180.5 1.5 217.5 7.5C187.5 11.5 37.5 14.5 0.5 8Z" fill="#62FF00" />
-                                </svg>
+                                <span className="z-50 relative">
+                                    取引条件で平日24時間取引可能。
+                                </span>
+                                <img src="/icons/detailline.svg" alt="whychoose1" className="absolute bottom-0 left-0 w-full h-[15px] z-0 opacity-90" />
                             </span>
                         </h3>
                         <p className=" text-[19px] leading-7 mb-8 text-[#4C4C4C] font-inter font-[400]">
@@ -87,40 +75,22 @@ export default function WhyChoose() {
                     <h3 className="text-[28px] font-bold leading-relaxed mb-6 text-[#4C4C4C]">
                         とにかくCFD取引が、<br />
                         <span className="relative inline-block">
-                            はやい。
-                            <svg
-                                className="absolute -bottom-2 left-0 w-full h-[15px] z-0 opacity-90"
-                                viewBox="0 0 218 16"
-                                fill="none"
-                                preserveAspectRatio="none"
-                                xmlns="http://www.w3.org/2000/svg"
-                            >
-                                <path d="M0.5 8C30.5 4.5 180.5 1.5 217.5 7.5C187.5 11.5 37.5 14.5 0.5 8Z" fill="#62FF00" />
-                            </svg>
+                            <span className="z-50 relative">
+                                はやい。
+                            </span>
+                           <img src="/icons/short.svg" alt="whychoose1" className="absolute bottom-[2px] left-0 w-full h-[15px] z-0 opacity-90" />
                         </span>{' '}
                         <span className="relative inline-block">
+                            <span className="z-50 relative">
                             やすい。
-                            <svg
-                                className="absolute -bottom-2 left-0 w-full h-[15px] z-0 opacity-90"
-                                viewBox="0 0 218 16"
-                                fill="none"
-                                preserveAspectRatio="none"
-                                xmlns="http://www.w3.org/2000/svg"
-                            >
-                                <path d="M0.5 8C30.5 4.5 180.5 1.5 217.5 7.5C187.5 11.5 37.5 14.5 0.5 8Z" fill="#62FF00" />
-                            </svg>
+                            </span>
+                            <img src="/icons/short.svg" alt="whychoose1" className="absolute bottom-[1px] left-0 w-full h-[15px] z-0 opacity-90" />
                         </span>{' '}
                         <span className="relative inline-block">
+                            <span className="z-50 relative">
                             スムーズ。
-                            <svg
-                                className="absolute -bottom-2 left-0 w-full h-[15px] z-0 opacity-90"
-                                viewBox="0 0 218 16"
-                                fill="none"
-                                preserveAspectRatio="none"
-                                xmlns="http://www.w3.org/2000/svg"
-                            >
-                                <path d="M0.5 8C30.5 4.5 180.5 1.5 217.5 7.5C187.5 11.5 37.5 14.5 0.5 8Z" fill="#62FF00" />
-                            </svg>
+                            </span>
+                            <img src="/icons/short.svg" alt="whychoose1" className="absolute bottom-[1px] left-0 w-full h-[15px] z-0 opacity-90" />
                         </span>
                     </h3>
                     <p className=" text-[18px] leading-7 mb-10 text-[#4C4C4C] font-inter font-[400]">

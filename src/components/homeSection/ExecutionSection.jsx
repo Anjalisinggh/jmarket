@@ -11,19 +11,7 @@ export default function ExecutionSection() {
                             MT4/MT5で、分析から執行まで一気通貫。
                         </h3>
                         {/* Hand-drawn Highlighter SVG */}
-                        <svg
-                            className="absolute bottom-[-5px] left-[-5px] w-[105%] h-[18px] z-0 "
-                            viewBox="0 0 218 16"
-                            fill="none"
-                            preserveAspectRatio="none"
-                            xmlns="http://www.w3.org/2000/svg"
-                        >
-                            <path
-                                d="M0.5 8C30.5 4.5 180.5 1.5 217.5 7.5C187.5 11.5 37.5 14.5 0.5 8Z"
-                                fill="#62FF00"
-                                filter="blur(0.5px)"
-                            />
-                        </svg>
+                        <img src="/icons/sv.svg" alt="whychoose1" className="absolute bottom-[1px] left-0 w-full h-[15px] z-0 opacity-90" />
                     </div>
 
                     <p className="text-[17px] leading-[1.7] mb-12 -mt-2 text-[#4C4C4C] font-inter">
