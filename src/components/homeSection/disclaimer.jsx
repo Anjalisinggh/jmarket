@@ -1,10 +1,10 @@
 export default function Disclaimer() {
   return (
     <div className="md:px-40 px-4 md:pb-5 pb-3 bg-white">
-      <div className="max-w-6xl mx-auto space-y-8 text-[14px] leading-[18px] text-[#797979] font-inter font-[500]">
+      <div className="max-w-6xl mx-auto md:space-y-8 space-y-4 text-[14px] leading-[18px] text-[#797979] font-inter font-[500]">
 
         <div className="flex md:gap-4 gap-2 group">
-          <span className=" flex-shrink-0 text-[#797979] md:text-[18px] text-[12px] transition-colors duration-300 group-hover:text-[#434343]">【重要】</span>
+          <span className="flex-shrink-0 text-[#797979] md:text-[18px] text-[12px] transition-colors duration-300 group-hover:text-[#434343]">【重要】</span>
           <div className="space-y-1 md:text-[14px] text-[9px] text-[#797979] leading-[1.4] md:leading-normal">
             <p className="transition-colors duration-300 hover:text-[#434343]">本ウェブサイトは日本居住者を対象としたものではありません。</p>
             <p className="transition-colors duration-300 hover:text-[#434343]">CFDは複雑な金融商品であり、レバレッジの影響により急速に資金を失う高いリスクを伴います。取引前にリスク開示をよくお読みください。</p>
@@ -12,7 +12,7 @@ export default function Disclaimer() {
           </div>
         </div>
 
-        <div className="space-y-6 md:pl-[50px] pl-[26px]">
+        <div className="md:space-y-6 space-y-3 md:pl-[50px] pl-[26px]">
           <div className="flex md:gap-6 gap-3 group">
             <span className="flex-shrink-0 w-4 md:text-[14px] text-[10px] text-[#797979] text-right transition-colors duration-300 group-hover:text-[#434343]">*1</span>
             <p className="md:text-[14px] text-[10px] text-[#797979] leading-[1.4] md:leading-normal transition-colors duration-300 hover:text-[#434343]">本ページに記載のスプレッドは参考値（平均値等）であり、市場環境・流動性・時間帯等により変動します。流動性が低い時間帯等ではスプレッドが拡大し、市況が落ち着くと通常に戻る場合があります。最新の条件は取引プラットフォームでご確認ください。</p>
