@@ -1,6 +1,10 @@
+'use client';
 import React from 'react';
+import { useFadeInUp, useStaggerFadeIn } from '@/utils/scrollAnimations';
 
 export default function Support() {
+    const headerRef = useFadeInUp(0);
+    const supportGridRef = useStaggerFadeIn(0.2);
   const supportMethods = [
     {
       type: "TEL",
@@ -44,7 +48,7 @@ export default function Support() {
       <div className="">
 
         {/* Main Header */}
-        <div className="text-center mb-8 sm:mb-10 md:mb-12">
+        <div ref={headerRef} className="text-center mb-8 sm:mb-10 md:mb-12">
           <div className="flex justify-center mb-6 sm:mb-8 md:mb-10 -mt-6 sm:-mt-8 md:-mt-10">
             <img src="/icons/support.svg" alt="support" className="max-w-[700px] w-full h-auto hidden md:block" />
             <img src="/images/heartjmarket.svg" alt="" className="h-[100px] md:hidden block" />
@@ -62,7 +66,7 @@ export default function Support() {
         </div>
 
         {/* Support Methods Grid */}
-        <div className="grid grid-cols-3 gap-1 sm:gap-5 md:gap-6 mt-6 sm:mt-8 md:mt-10">
+        <div ref={supportGridRef} className="grid grid-cols-3 gap-1 sm:gap-5 md:gap-6 mt-6 sm:mt-8 md:mt-10">
           <div className="relative bg-[#F5F5F5] rounded-sm px-1 sm:px-5 pt-2 pb-5 sm:py-4 md:py-5 flex flex-col items-center text-center transition-all duration-300 hover:shadow-lg hover:scale-[1.02] cursor-pointer">
             <div className="relative md:mb-1 sm:mb-2 inline-block">
               <span className="text-[15px] sm:text-[32px] md:text-[40px] font-[700] tracking-[1px] text-[#000000] relative z-10">

@@ -1,7 +1,11 @@
 'use client'
 import React from 'react';
+import { useFadeInUp, useStaggerFadeIn } from '@/utils/scrollAnimations';
 
 export default function MarketInfo() {
+    const headerRef = useFadeInUp(0);
+    const desktopGridRef = useStaggerFadeIn(0.2);
+    const mobileGridRef = useStaggerFadeIn(0.2);
   const marketData = [
     {
       id: 1,
@@ -34,7 +38,7 @@ export default function MarketInfo() {
       <div className="">
 
         {/* Header Section */}
-        <div className="text-center mb-8 sm:mb-12 md:mb-16">
+        <div ref={headerRef} className="text-center mb-8 sm:mb-12 md:mb-16">
           <div className="relative inline-block mb-2">
             <div className='absolute -top-13 sm:-top-10 md:-top-12 left-[50%] sm:left-[38%] md:left-[40%] -translate-x-1/2 animate-cloud-float'>
               <img src="/icons/cloud.svg" alt="" className='h-12 sm:h-10 md:h-12' />
@@ -60,7 +64,7 @@ export default function MarketInfo() {
         </div>
 
         {/* Content Grid */}
-        <div className="grid-cols-1 md:grid-cols-2 gap-0 md:gap-2 hidden md:grid">
+        <div ref={desktopGridRef} className="grid-cols-1 md:grid-cols-2 gap-0 md:gap-2 hidden md:grid">
           {marketData.map((item, index) => (
             <div
               key={item.id}
@@ -99,7 +103,7 @@ export default function MarketInfo() {
         </div>
 
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-2 md:gap-2 md:hidden block">
+        <div ref={mobileGridRef} className="grid grid-cols-1 md:grid-cols-2 gap-2 md:gap-2 md:hidden block">
           {marketData.map((item, index) => (
             <div
               key={item.id}

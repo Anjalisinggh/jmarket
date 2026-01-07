@@ -1,8 +1,12 @@
 'use client';
 
 import { useState } from 'react';
+import { useFadeInUp, useStaggerFadeIn } from '@/utils/scrollAnimations';
 
 export default function News() {
+    const tabsRef = useFadeInUp(0);
+    const newsListRef = useStaggerFadeIn(0.1);
+    const buttonRef = useFadeInUp(0.3);
   const [activeTab, setActiveTab] = useState('announcements');
 
   const newsItems = [
@@ -18,7 +22,7 @@ export default function News() {
     <div className="bg-white px-4 sm:px-6 md:px-12 lg:px-24 xl:px-36 py-12 sm:py-14 md:py-16 pb-5 font-sans text-[#4C4C4C]">
       <div className="">
         {/* Tab Header */}
-        <div className="flex border-b-2 border-gray-100 mb-8 sm:mb-12 md:mb-16">
+        <div ref={tabsRef} className="flex border-b-2 border-gray-100 mb-8 sm:mb-12 md:mb-16">
           <button
             onClick={() => setActiveTab('announcements')}
             className={`flex-1 pb-2 px-2 sm:px-4 md:px-6 text-[16px] sm:text-[20px] md:text-[24px] lg:text-[28px] font-bold transition-all relative rounded-lg cursor-pointer ${activeTab === 'announcements' ? 'text-[#FFA500]' : 'text-[#B7B7B7]'}`}
@@ -40,7 +44,7 @@ export default function News() {
         </div>
 
         {/* News List */}
-        <div className="sm:px-4 md:px-8 lg:px-12 xl:px-20">
+        <div ref={newsListRef} className="sm:px-4 md:px-8 lg:px-12 xl:px-20">
           {newsItems.map((item, index) => (
             <div key={index} className="group cursor-pointer border-b border-gray-100 pb-6 sm:pb-7 md:pb-8 last:border-0">
               <div className="flex flex-wrap items-center gap-3 sm:gap-4 md:gap-6 mb-2 sm:mb-3">
@@ -60,7 +64,7 @@ export default function News() {
         </div>
 
         {/* View More Button */}
-        <div className="text-center mt-5 sm:mt-12 md:mt-16 mb-8 md:mb-0">
+        <div ref={buttonRef} className="text-center mt-5 sm:mt-12 md:mt-16 mb-8 md:mb-0">
           <button className="cursor-pointer bg-[#FFA500] text-white px-16 sm:px-16 md:px-24 lg:px-32 xl:px-40 py-2.5 sm:py-3.5 md:py-4 rounded-full font-bold text-[16px] sm:text-[18px] md:text-[20px] hover:bg-[#e69500] transition-all shadow-md">
             もっとみる
           </button>

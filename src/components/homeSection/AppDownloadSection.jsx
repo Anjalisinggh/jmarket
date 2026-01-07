@@ -1,7 +1,12 @@
+'use client';
+import { useStaggerCardReveal } from '@/utils/scrollAnimations';
+
 export default function AppDownloadSection() {
+  const cardsRef = useStaggerCardReveal(0.1);
+  
   return (
     <div className="md:px-40 px-4 md:pt-5 pt-3 pb-5 bg-white ">
-      <div className="grid md:grid-cols-2 grid-cols-1 md:gap-10 gap-4">
+      <div ref={cardsRef} className="grid md:grid-cols-2 grid-cols-1 md:gap-10 gap-4">
         {/* Left Card - Spread and Cost Information */}
         <div className="bg-[#F8F9FA] rounded-2xl md:p-10 md:pb-0 p-4 pb-0 transition-all duration-300 hover:shadow-lg hover:scale-[1.02] cursor-pointer">
           <h3 className="md:text-[30px] text-[20px] font-bold leading-relaxed mb-6 text-[#4C4C4C]">

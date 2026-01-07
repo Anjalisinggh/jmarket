@@ -1,4 +1,10 @@
+'use client';
+import { useFadeInUp, useStaggerCardReveal } from '@/utils/scrollAnimations';
+
 export default function WhyChoose() {
+    const headerRef = useFadeInUp(0);
+    const cardsRef = useStaggerCardReveal(0.1);
+    
     const featurePoints = [
         {
             title: "安定した低スプレッド",
@@ -21,7 +27,7 @@ export default function WhyChoose() {
     return (
         <div className="md:px-40 px-4 md:pt-20 pt-4 md:pb-5 bg-white">
             {/* Main Header */}
-            <div className="flex flex-col items-center md:mb-12 mb-2">
+            <div ref={headerRef} className="flex flex-col items-center md:mb-12 mb-2">
 
                 <div className="flex items-end justify-center md:gap-4 gap-1 mb-5">
                     <img
@@ -37,7 +43,7 @@ export default function WhyChoose() {
                 </div>
             </div>
 
-            <div className="grid md:grid-cols-2 grid-cols-1 md:gap-10 gap-4">
+            <div ref={cardsRef} className="grid md:grid-cols-2 grid-cols-1 md:gap-10 gap-4">
                 {/* Left Card */}
                 <div className="bg-[#F8F9FA] rounded-2xl md:p-10 md:pb-0 p-4 pb-0 flex flex-col justify-between overflow-hidden transition-all duration-300 hover:shadow-lg hover:scale-[1.02] cursor-pointer">
                     <div>

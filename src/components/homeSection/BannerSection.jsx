@@ -1,5 +1,9 @@
 'use client';
+import { useFadeInUp } from '@/utils/scrollAnimations';
+
 export default function BannerSection() {
+    const warningRef = useFadeInUp(0);
+    const bannersRef = useFadeInUp(0.2);
 
     const bannerItems = [
         {
@@ -16,7 +20,7 @@ export default function BannerSection() {
     return (
         <div className="md:px-40 px-0">
             <div className="px-4 md:px-0">
-                <div className="w-full border border-[#E4E4E4] rounded-xl flex items-center gap-2 md:py-5 py-3 md:px-7 px-4 mb-4 md:mb-8 group cursor-pointer hover:border-[#FFA500] transition-all duration-300">
+                <div ref={warningRef} className="w-full border border-[#E4E4E4] rounded-xl flex items-center gap-2 md:py-5 py-3 md:px-7 px-4 mb-4 md:mb-8 group cursor-pointer hover:border-[#FFA500] transition-all duration-300">
                     <img src="/icons/warning.svg" alt="warning" className="md:h-7 h-5 mr-1 md:mr-4" />
                     <p className="md:text-[14px] text-[11px] font-inter font-[900] text-[#363636] flex-1">【重要】投資家を狙った投資詐欺にご注意ください。</p>
                     <img src="/icons/rightArrow.svg" alt="arrow" className="md:h-4 h-2.5 animate-arrow-slide" />
@@ -24,6 +28,7 @@ export default function BannerSection() {
             </div>
 
             <div
+                ref={bannersRef}
                 className="flex md:grid md:grid-cols-3 md:gap-4 overflow-x-auto md:overflow-x-visible pb-2 md:pb-0 scroll-smooth hide-scrollbar"
                 style={{
                     scrollbarWidth: 'none',

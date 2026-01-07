@@ -1,7 +1,10 @@
 'use client'
 import React from 'react';
+import { useFadeInUp, useStaggerFadeIn } from '@/utils/scrollAnimations';
 
 export default function AccountOpening() {
+    const headerRef = useFadeInUp(0);
+    const stepsRef = useStaggerFadeIn(0.2);
     const steps = [
         {
             step: 1,
@@ -26,7 +29,7 @@ export default function AccountOpening() {
             <div className="">
 
                 {/* Header Section */}
-                <div className="md:mb-16 mt-10 text-center"> {/* Increased margin to give space for the overlapping badges */}
+                <div ref={headerRef} className="md:mb-16 mt-10 text-center"> {/* Increased margin to give space for the overlapping badges */}
                     <div className="relative inline-block mb-4">
                         <span className="z-50 relative">
                             <h2 className="md:text-4xl text-[24px] font-[500] text-[#4C4C4C] relative z-5 font-inter">口座開設の流れ</h2>
@@ -37,7 +40,7 @@ export default function AccountOpening() {
                 </div>
 
                 {/* Steps Grid */}
-                <div className="grid grid-cols-1 md:grid-cols-3 md:gap-2 gap-5 mb-12 md:mt-24 mt-10">
+                <div ref={stepsRef} className="grid grid-cols-1 md:grid-cols-3 md:gap-2 gap-5 mb-12 md:mt-24 mt-10">
                     {steps.map((item) => (
                         /* Removed overflow-hidden so the badge can sit outside */
                         <div key={item.step} className="bg-[#F8F9FA] rounded-xl md:py-10 py-5 flex flex-col relative">

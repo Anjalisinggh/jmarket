@@ -2,8 +2,11 @@
 
 import { useState } from 'react';
 import { ChevronDown } from 'lucide-react';
+import { useFadeInUp, useStaggerFadeIn } from '@/utils/scrollAnimations';
 
 export default function Frequently() {
+    const headerRef = useFadeInUp(0);
+    const faqListRef = useStaggerFadeIn(0.1);
   const [openIndex, setOpenIndex] = useState(0);
 
   const faqData = [
@@ -34,9 +37,9 @@ export default function Frequently() {
     <div className="bg-white px-4 sm:px-6 md:px-8 lg:px-6 py-12 sm:py-16 md:py-20 pt-10 sm:pt-12 md:pt-15 mb-4 sm:mb-16 md:mb-20 font-sans text-[#333333]">
       <div className="max-w-5xl mx-auto">
         {/* Main Title */}
-        <h2 className="text-[22px] sm:text-[24px] md:text-[27px] font-bold mb-3">よくあるご質問</h2>
+        <h2 ref={headerRef} className="text-[22px] sm:text-[24px] md:text-[27px] font-bold mb-3">よくあるご質問</h2>
 
-        <div>
+        <div ref={faqListRef}>
           {faqData.map((item, index) => (
             <div key={index} className="border-b border-[#9d9d9d] last:border-b-0">
               <button

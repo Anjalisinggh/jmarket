@@ -1,6 +1,10 @@
+'use client';
 import React from 'react';
+import { useFadeInUp, useStaggerFadeIn } from '@/utils/scrollAnimations';
 
 export default function FNQSection() {
+    const headerRef = useFadeInUp(0);
+    const faqGridRef = useStaggerFadeIn(0.2);
   const faqData = [
     {
       id: 1,
@@ -37,7 +41,7 @@ export default function FNQSection() {
     <div className="bg-[#F8F9FA] md:px-40 px-4 md:py-14 py-14 font-sans">
       <div className="">
 
-        <div className='flex justify-center'>
+        <div ref={headerRef} className='flex justify-center'>
           <img src="/images/jmphone.svg" alt="" className='h-[80px] md:hidden block'/>
           <img src="/images/jmdestop.svg" alt="" className='h-[50px] md:block hidden'/>
         </div>
@@ -45,7 +49,7 @@ export default function FNQSection() {
         <p className='text-[#4C4C4C] md:text-[19px] text-[15px] mt-5 font-inter font-[400] text-center md:mb-24 mb-12'>質問コーナー</p>
 
         {/* FAQ Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 md:px-20 md:gap-6 gap-12">
+        <div ref={faqGridRef} className="grid grid-cols-1 md:grid-cols-2 md:px-20 md:gap-6 gap-12">
           {faqData.map((item) => (
             <div key={item.id} className="bg-white rounded-lg md:p-8 p-5 md:pt-10 pt-10 relative shadow-sm relative">
 

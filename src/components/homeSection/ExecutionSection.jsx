@@ -1,7 +1,12 @@
+'use client';
+import { useFadeInUp } from '@/utils/scrollAnimations';
+
 export default function ExecutionSection() {
+    const cardRef = useFadeInUp(0.2);
+    
     return (
         <div className="md:px-40 px-4 md:py-10 pb-5 md:pt-5 bg-white">
-            <div className="bg-[#F8F9FA] rounded-2xl flex flex-col md:flex-row items-center justify-between transition-all duration-300 hover:shadow-lg hover:scale-[1.02] cursor-pointer">
+            <div ref={cardRef} className="bg-[#F8F9FA] rounded-2xl flex flex-col md:flex-row items-center justify-between transition-all duration-300 hover:shadow-lg hover:scale-[1.02] cursor-pointer">
 
                 {/* Left Column - 60% width */}
                 <div className="md:w-[62%] w-full md:p-14 p-4">
