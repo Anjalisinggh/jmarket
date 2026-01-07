@@ -58,7 +58,7 @@ export default function AccountOpening() {
 
                             {/* Illustration */}
                             <img src={item.image} alt="whychoose1" className="h-[350px] md:block hidden" />
-                            <img src={item.image} alt="whychoose1" className="absolute h-[125px] right-2 bottom-0"/>
+                            <img src={item.image} alt="whychoose1" className="absolute h-[125px] right-2 bottom-0 md:hidden block"/>
                         </div>
                     ))}
                 </div>

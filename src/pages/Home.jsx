@@ -10,7 +10,6 @@ import MarketInfo from "@/components/homeSection/MarketInfo";
 import Support from "@/components/homeSection/Support";
 import News from "@/components/homeSection/News";
 import Frequently from "@/components/homeSection/Frequently";
-import Footer from "@/components/layout/footer";
 export default function Home() {
   return (
     <div>
@@ -26,7 +25,6 @@ export default function Home() {
       <Support />
       <News />
       <Frequently />
-      <Footer />
     </div>
   )
 }

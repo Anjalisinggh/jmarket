@@ -42,7 +42,7 @@ export default function MarketInfo() {
 
             {/* Title with Brush Stroke Underline */}
             <div className="relative">
-              <h2 className="text-[18px] sm:text-[28px] md:text-[32px] lg:text-[36px] font-bold text-[#4C4C4C] relative z-10">
+              <h2 className="text-[19px] sm:text-[28px] md:text-[32px] lg:text-[36px] font-bold text-[#4C4C4C] relative z-10">
                 知っておくと得するマーケット情報
               </h2>
               <svg
@@ -59,7 +59,7 @@ export default function MarketInfo() {
         </div>
 
         {/* Content Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-0 md:gap-2">
+        <div className="grid-cols-1 md:grid-cols-2 gap-0 md:gap-2 hidden md:grid">
           {marketData.map((item, index) => (
             <div
               key={item.id}
@@ -78,7 +78,7 @@ export default function MarketInfo() {
 
                   {/* Button */}
                   <div className='flex-shrink-0'>
-                    <button className={`${index === 0 ? 'border border-blue-500 text-blue-500' : 'border border-[#E5E5E5] text-[#909090]'} font-inter font-[900] rounded-sm px-3 sm:px-3.5 md:px-4 py-1.5 sm:py-2 md:py-2.5 text-[11px] sm:text-[12px] md:text-[13px] flex items-center gap-2 sm:gap-2.5 md:gap-3`}>
+                    <button className={`border border-[#E5E5E5] text-[#909090] font-inter font-[900] rounded-sm px-3 sm:px-3.5 md:px-4 py-1.5 sm:py-2 md:py-2.5 text-[11px] sm:text-[12px] md:text-[13px] flex items-center gap-2 sm:gap-2.5 md:gap-3`}>
                       詳しく見る
                       <img src="/icons/right-arrow.svg" alt="" className='h-1.5 sm:h-1.5 md:h-2' />
                     </button>
@@ -92,6 +92,35 @@ export default function MarketInfo() {
                 <p className="text-[#4C4C4C] text-[11px] sm:text-[11.5px] md:text-[12px] font-inter font-[500] leading-relaxed pl-4 sm:pl-6 md:pl-8 pr-4 sm:pr-6 md:pr-4">
                   {item.description}
                 </p>
+              </div>
+            </div>
+          ))}
+        </div>
+
+
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-2 md:gap-2 md:hidden block">
+          {marketData.map((item, index) => (
+            <div
+              key={item.id}
+              className={`bg-white border border-gray-200 rounded-xl py-4 shadow-none md:shadow-sm md:border md:border-gray-50 flex flex-col justify-between hover:shadow-md transition-shadow`}
+            >
+              <div className='flex items-start gap-2'>
+                <img src={item.image} alt="" className='h-[80px] mt-4' />
+                <div>
+                  {/* Text Content */}
+                  <h3 className="text-[16px] sm:text-[18px] md:text-[20px] font-bold font-inter text-[#4C4C4C] mb-1">
+                    {item.title}
+                  </h3>
+                  <p className="text-[#4C4C4C] text-[11px] sm:text-[11.5px] md:text-[12px] font-inter font-[500] leading-relaxed">
+                    {item.description}
+                  </p>
+                  <div className='flex-shrink-0 w-full flex justify-center mt-3'>
+                    <button className={`border border-[#E5E5E5] text-[#909090] font-inter font-[900] rounded-sm px-3 sm:px-3.5 md:px-4 py-1.5 sm:py-2 md:py-2.5 text-[11px] sm:text-[12px] md:text-[13px] flex items-center gap-2 sm:gap-2.5 md:gap-3`}>
+                      詳しく見る
+                      <img src="/icons/right-arrow.svg" alt="" className='h-1.5 sm:h-1.5 md:h-2' />
+                    </button>
+                  </div>
+                </div>
               </div>
             </div>
           ))}

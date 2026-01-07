@@ -34,32 +34,18 @@ export default function FNQSection() {
 
   return (
 
-    <div className="bg-[#F8F9FA] md:px-40 px-4 md:py-14 py-10 font-sans">
+    <div className="bg-[#F8F9FA] md:px-40 px-4 md:py-14 py-14 font-sans">
       <div className="">
 
-        <div className='flex flex-col md:flex-row items-center justify-center mb-4'>
-          <div className='flex items-center'>
-            <img src="/icons/navLogo.svg" alt="" className='z-10 md:h-[40px] h-[30px]' />
-            <p className='text-[#4C4C4C] md:text-[30px] text-[24px] font-inter font-[600] z-10'>が提供する</p>
-          </div>
-          <div className='flex'>
-            <p className='text-[#FFA500] text-[40px] font-inter font-[800] z-10'>CFD・FX</p>
-            <p className='text-[#4C4C4C] text-[30px] font-inter font-[600] mt-2 z-10'>取引とは？</p>
-          </div>
-          {/* <svg
-            className="absolute mt-5 left-1/2 -translate-x-1/2 w-1/2 h-[15px] z-0 opacity-90"
-            viewBox="0 0 218 16"
-            fill="none"
-            preserveAspectRatio="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path d="M0.5 8C30.5 4.5 180.5 1.5 217.5 7.5C187.5 11.5 37.5 14.5 0.5 8Z" fill="#62FF00" />
-          </svg> */}
+        <div className='flex justify-center'>
+          <img src="/images/jmphone.svg" alt="" className='h-[80px] md:hidden block'/>
+          <img src="/images/jmdestop.svg" alt="" className='h-[50px] md:block hidden'/>
         </div>
-        <p className='text-[#4C4C4C] text-[19px] font-inter font-[400] text-center mb-24'>質問コーナー</p>
+
+        <p className='text-[#4C4C4C] md:text-[19px] text-[15px] mt-5 font-inter font-[400] text-center md:mb-24 mb-12'>質問コーナー</p>
 
         {/* FAQ Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 md:px-20 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 md:px-20 md:gap-6 gap-12">
           {faqData.map((item) => (
             <div key={item.id} className="bg-white rounded-lg md:p-8 p-5 md:pt-10 pt-10 relative shadow-sm relative">
 
