@@ -8,7 +8,7 @@ export default function Footer() {
             <footer className="max-w-[1512px] mx-auto text-white px-4 sm:px-6 md:px-12 lg:px-40 pt-12 sm:pt-20 md:pt-28 pb-12 sm:pb-16 md:pb-20">
                 <div className="">
                     {/* Navigation Links - Organized into 5 rows */}
-                    <div className="space-y-3 sm:space-y-4 mb-8 sm:mb-10 md:mb-12">
+                    <div className="space-y-3 sm:space-y-4 mb-8 sm:mb-10 md:mb-12 hidden md:block">
                         {/* Row 1: 5 links */}
                         <div className="flex flex-wrap gap-x-4 sm:gap-x-6 md:gap-x-8 gap-y-2">
                             {["TOP", "トレーディング", "取引口座タイプ", "入金及び出金", "クライアント保護"].map((link, idx) => (
@@ -52,6 +52,29 @@ export default function Footer() {
                                     {link}
                                 </a>
                             ))}
+                        </div>
+                    </div>
+
+                    <div className='flex flex-col gap-3 md:hidden mb-10'>
+                        <div className='flex items-center justify-between'>
+                            <p className='font-inter font-[500] text-[18px]'>TOP</p>
+                            <img src="/icons/dropdown_footer.svg" alt="" className='h-[10px]'/>
+                        </div>
+                        <div className='flex items-center justify-between'>
+                            <p className='font-inter font-[500] text-[18px]'>マーケット</p>
+                            <img src="/icons/dropdown_footer.svg" alt="" className='h-[10px]'/>
+                        </div>
+                        <div className='flex items-center justify-between'>
+                            <p className='font-inter font-[500] text-[18px]'>プラットフォーム</p>
+                            <img src="/icons/dropdown_footer.svg" alt="" className='h-[10px]'/>
+                        </div>
+                        <div className='flex items-center justify-between'>
+                            <p className='font-inter font-[500] text-[18px]'>教育</p>
+                            <img src="/icons/dropdown_footer.svg" alt="" className='h-[10px]'/>
+                        </div>
+                        <div className='flex items-center justify-between'>
+                            <p className='font-inter font-[500] text-[18px]'>会社</p>
+                            <img src="/icons/dropdown_footer.svg" alt="" className='h-[10px]'/>
                         </div>
                     </div>
 

@@ -8,7 +8,7 @@ export default function ExecutionSection() {
                     <div className="relative mb-8 inline-block">
                         {/* Heading Text */}
                         <h3 className="relative font-inter z-10 md:text-[28px] text-[22px] font-[500] leading-tight text-[#4C4C4C]">
-                            MT4/MT5で、<br />分析から執行まで一気通貫。
+                            MT4/MT5で、<br className="md:hidden block"/>分析から執行まで一気通貫。
                         </h3>
                         {/* Hand-drawn Highlighter SVG */}
                         <img src="/icons/sv.svg" alt="whychoose1" className="absolute bottom-[1px] left-0 w-full h-[15px] z-0 opacity-90" />

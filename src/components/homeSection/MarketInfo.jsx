@@ -114,13 +114,13 @@ export default function MarketInfo() {
                   <p className="text-[#4C4C4C] text-[11px] sm:text-[11.5px] md:text-[12px] font-inter font-[500] leading-relaxed">
                     {item.description}
                   </p>
-                  <div className='flex-shrink-0 w-full flex justify-center mt-3'>
-                    <button className={`border border-[#E5E5E5] text-[#909090] font-inter font-[900] rounded-sm px-3 sm:px-3.5 md:px-4 py-1.5 sm:py-2 md:py-2.5 text-[11px] sm:text-[12px] md:text-[13px] flex items-center gap-2 sm:gap-2.5 md:gap-3`}>
-                      詳しく見る
-                      <img src="/icons/right-arrow.svg" alt="" className='h-1.5 sm:h-1.5 md:h-2' />
-                    </button>
-                  </div>
                 </div>
+              </div>
+              <div className='flex-shrink-0 w-full flex justify-center mt-3'>
+                <button className={`border border-[#E5E5E5] text-[#909090] font-inter font-[900] rounded-sm px-3 sm:px-3.5 md:px-4 py-1.5 sm:py-2 md:py-2.5 text-[11px] sm:text-[12px] md:text-[13px] flex items-center gap-2 sm:gap-2.5 md:gap-3`}>
+                  詳しく見る
+                  <img src="/icons/right-arrow.svg" alt="" className='h-1.5 sm:h-1.5 md:h-2' />
+                </button>
               </div>
             </div>
           ))}
