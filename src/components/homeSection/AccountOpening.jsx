@@ -21,54 +21,55 @@ export default function AccountOpening() {
     ];
 
     return (
-        <div className="bg-white px-40 pt-5 mb-20">
+        <div className="bg-white md:px-40 px-4 md:pt-5 pt-3 mb-20">
             <div className="">
 
                 {/* Header Section */}
-                <div className="mb-16 mt-10 text-center"> {/* Increased margin to give space for the overlapping badges */}
+                <div className="md:mb-16 mt-10 text-center"> {/* Increased margin to give space for the overlapping badges */}
                     <div className="relative inline-block mb-4">
                         <span className="z-50 relative">
-                            <h2 className="text-4xl font-[500] text-[#4C4C4C] relative z-5 font-inter">口座開設の流れ</h2>
+                            <h2 className="md:text-4xl text-[24px] font-[500] text-[#4C4C4C] relative z-5 font-inter">口座開設の流れ</h2>
                         </span>
                         <img src="/icons/acc.svg" alt="whychoose1" className="absolute left-0 w-full h-[15px] bottom-[-10px] opacity-90" />
                     </div>
-                    <p className="text-[#4C4C4C] mt-4 text-[17px]">最短数時間で解説完了・取引可能</p>
+                    <p className="text-[#4C4C4C] md:mt-4 mt-2 md:text-[17px] text-[15px]">最短数時間で解説完了・取引可能</p>
                 </div>
 
                 {/* Steps Grid */}
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-2 mb-12 mt-24">
+                <div className="grid grid-cols-1 md:grid-cols-3 md:gap-2 gap-5 mb-12 md:mt-24 mt-10">
                     {steps.map((item) => (
                         /* Removed overflow-hidden so the badge can sit outside */
-                        <div key={item.step} className="bg-[#F8F9FA] rounded-xl pt-10 pb-10 flex flex-col relative">
+                        <div key={item.step} className="bg-[#F8F9FA] rounded-xl md:py-10 py-5 flex flex-col relative">
 
                             {/* Step Badge - Positioned Absolute, Left Top, Overlapping */}
-                            <div className="absolute -top-5 left-6 bg-[#FFA500] text-white font-black px-3.5 tracking-[1px] py-1 rounded-full text-[12px] z-30 flex items-center font-inter gap-1.5 shadow-md">
-                                <span className="text-[20px] font-black font-inter">STEP {item.step}</span>
+                            <div className="absolute md:-top-5 -top-1 left-6 bg-[#FFA500] text-white font-black px-3.5 tracking-[1px] py-1 rounded-full text-[12px] z-30 flex items-center font-inter gap-1.5 shadow-md">
+                                <span className="md:text-[20px] text-[13px] font-black font-inter">STEP {item.step}</span>
                             </div>
 
                             {/* Title */}
-                            <p className="text-[#4C4C4C] font-[600] text-[17px] leading-relaxed mb-4 text-left mt-5 w-full whitespace-pre-wrap font-inter px-6">
+                            <p className="text-[#4C4C4C] md:w-full w-[70%] md:font-[600] font-[500] md:text-[17px] text-[15px] md:leading-relaxed leading-[1.4] mb-4 text-left mt-5 font-inter px-6">
                                 {item.title}
                             </p>
 
                             {/* Step 3 Campaign Badge */}
                             {item.hasBadge && (
-                                <img src="/icons/stepcloud.svg" alt="whychoose1" className="absolute -top-14 -right-18 w-full h-[85px] z-0 opacity-90" />
+                                <img src="/icons/stepcloud.svg" alt="whychoose1" className="absolute md:-top-14 -top-6 md:-right-18 -right-4 w-full md:h-[85px] h-[58px] z-0" />
                             )}
 
                             {/* Illustration */}
-                            <img src={item.image} alt="whychoose1" className="h-[350px]" />
+                            <img src={item.image} alt="whychoose1" className="h-[350px] md:block hidden" />
+                            <img src={item.image} alt="whychoose1" className="absolute h-[125px] right-2 bottom-0"/>
                         </div>
                     ))}
                 </div>
 
                 {/* Bottom CTA Section */}
                 <div className="flex flex-col items-center mt-3">
-                    <p className="text-bold font-bold text-[#4C4C4C] text-[18px] mb-6">
-                        新規口座開設＋条件達成で<span className="text-[#00D084] font-bold text-[24px]">5,000円</span>プレゼント
+                    <p className="text-bold font-bold text-[#4C4C4C] md:text-[18px] text-[15px] mb-6">
+                        新規口座開設＋条件達成で<span className="text-[#00D084] font-bold md:text-[24px] text-[20px]">5,000円</span>プレゼント
                     </p>
 
-                    <button className="w-full bg-[#FFA500] tracking-[1.5px] hover:bg-[#e69500] transition-colors text-white text-[20px] font-[600] py-4 px-8 rounded-full shadow-md font-inter">
+                    <button className="w-full bg-[#FFA500] tracking-[1.5px] hover:bg-[#e69500] transition-colors text-white md:text-[20px] text-[14px] font-[600] md:py-4 py-3 px-8 rounded-full shadow-md font-inter">
                         無料新規口座開設はこちら
                     </button>
                 </div>

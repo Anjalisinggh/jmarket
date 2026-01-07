@@ -34,10 +34,10 @@ export default function FNQSection() {
 
   return (
 
-    <div className="bg-[#F8F9FA] px-4 md:px-40 py-14 font-sans">
+    <div className="bg-[#F8F9FA] md:px-40 px-4 md:py-14 py-10 font-sans">
       <div className="">
 
-        <div className='flex items-center justify-center mb-4'>
+        {/* <div className='flex items-center justify-center mb-4'>
           <img src="/icons/navLogo.svg" alt="" className='z-10' />
           <p className='text-[#4C4C4C] text-[30px] font-inter font-[600] mt-3 z-10 ml-2'>が提供する</p>
           <p className='text-[#FFA500] text-[40px] font-inter font-[800] z-10'>CFD・FX</p>
@@ -51,29 +51,29 @@ export default function FNQSection() {
           >
             <path d="M0.5 8C30.5 4.5 180.5 1.5 217.5 7.5C187.5 11.5 37.5 14.5 0.5 8Z" fill="#62FF00" />
           </svg>
-        </div>
+        </div> */}
         <p className='text-[#4C4C4C] text-[19px] font-inter font-[400] text-center mb-24'>質問コーナー</p>
 
         {/* FAQ Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 px-20 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 md:px-20 gap-6">
           {faqData.map((item) => (
-            <div key={item.id} className="bg-white rounded-lg p-8 pt-10 relative shadow-sm relative">
+            <div key={item.id} className="bg-white rounded-lg md:p-8 p-5 md:pt-10 pt-10 relative shadow-sm relative">
 
 
               {/* Badge with circled number */}
-              <div className="absolute -top-4 left-8 bg-[#FFA500] text-white px-8 py-1.5 font-bold flex items-center justify-center gap-2">
-                <span className="text-[16px]">質問</span>
-                <span className="w-5.5 h-5.5 rounded-full border-2 border-white flex items-center justify-center text-[13px] font-inter font-[800]">
+              <div className="absolute -top-4 left-8 bg-[#FFA500] text-white md:px-8 px-5 md:py-1.5 py-2 font-bold flex items-center justify-center gap-2">
+                <span className="md:text-[16px] text-[13px]">質問</span>
+                <span className="md:w-5.5 md:h-5.5 w-5 h-5 rounded-full border-2 border-white flex items-center justify-center md:text-[13px] text-[10px] font-inter font-[800]">
                   {item.id}
                 </span>
               </div>
               {/* Content */}
               <div className="flex flex-col h-full">
-                <h3 className="text-[30px] font-bold text-[#4C4C4C] leading-tight mb-5 whitespace-pre-wrap">
+                <h3 className="md:text-[30px] text-[20px] font-bold text-[#4C4C4C] leading-tight mb-5 whitespace-pre-wrap">
                   {item.question}
                 </h3>
 
-                <p className="text-[#666] text-[16px] font-inter font-[500] leading-relaxed flex-grow whitespace-pre-wrap">
+                <p className="text-[#666] md:text-[16px] text-[13px] font-inter font-[500] leading-relaxed flex-grow whitespace-pre-wrap">
                   {item.description}
                 </p>
 
@@ -85,7 +85,7 @@ export default function FNQSection() {
                 </div>
               </div>
 
-              <div className='absolute w-[150px] h-[150px] right-5 bottom-5'>
+              <div className='absolute md:w-[150px] w-[130px] md:h-[150px] h-[130px] right-5 bottom-5'>
                 <img src={item.image} alt="" className='w-full h-full object-contain' />
               </div>
 

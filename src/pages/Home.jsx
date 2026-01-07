@@ -22,7 +22,7 @@ export default function Home() {
       <Disclaimer />
       <AccountOpening />
       <FNQSection />
-      <MarketInfo />
+      <MarketInfo />/
       <Support />
       <News />
       <Frequently />

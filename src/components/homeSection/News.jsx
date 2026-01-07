@@ -15,13 +15,13 @@ export default function News() {
   ];
 
   return (
-    <div className="bg-white px-4 md:px-36 py-16 pb-5 font-sans text-[#4C4C4C] ">
+    <div className="bg-white px-4 sm:px-6 md:px-12 lg:px-24 xl:px-36 py-12 sm:py-14 md:py-16 pb-5 font-sans text-[#4C4C4C]">
       <div className="">
         {/* Tab Header */}
-        <div className="flex border-b-2 border-gray-100 mb-16">
+        <div className="flex border-b-2 border-gray-100 mb-8 sm:mb-12 md:mb-16">
           <button
             onClick={() => setActiveTab('announcements')}
-            className={`flex-1 pb-2 px-6 text-[24px] md:text-[28px] font-bold transition-all relative rounded-lg ${activeTab === 'announcements' ? 'text-[#FFA500]' : 'text-[#B7B7B7]'}`}
+            className={`flex-1 pb-2 px-2 sm:px-4 md:px-6 text-[16px] sm:text-[20px] md:text-[24px] lg:text-[28px] font-bold transition-all relative rounded-lg ${activeTab === 'announcements' ? 'text-[#FFA500]' : 'text-[#B7B7B7]'}`}
           >
             お知らせ
             {activeTab === 'announcements' && (
@@ -30,7 +30,7 @@ export default function News() {
           </button>
           <button
             onClick={() => setActiveTab('press')}
-            className={`flex-1 pb-2 text-[24px] md:text-[28px] font-bold transition-all relative ${activeTab === 'press' ? 'text-[#FFA500]' : 'text-[#B7B7B7]'}`}
+            className={`flex-1 pb-2 px-2 sm:px-4 md:px-6 text-[16px] sm:text-[20px] md:text-[24px] lg:text-[28px] font-bold transition-all relative ${activeTab === 'press' ? 'text-[#FFA500]' : 'text-[#B7B7B7]'}`}
           >
             プレスリリース
             {activeTab === 'press' && (
@@ -40,19 +40,19 @@ export default function News() {
         </div>
 
         {/* News List */}
-        <div className="px-20">
+        <div className="sm:px-4 md:px-8 lg:px-12 xl:px-20">
           {newsItems.map((item, index) => (
-            <div key={index} className="group cursor-pointer border-b border-gray-100 pb-8 last:border-0">
-              <div className="flex items-center gap-6 mb-3">
+            <div key={index} className="group cursor-pointer border-b border-gray-100 pb-6 sm:pb-7 md:pb-8 last:border-0">
+              <div className="flex flex-wrap items-center gap-3 sm:gap-4 md:gap-6 mb-2 sm:mb-3">
                 {/* Increased Date Font Size */}
-                <span className="text-[18px] text-[#333333] font-[400] font-inter">{item.date}</span>
+                <span className="text-[13px] sm:text-[16px] md:text-[18px] text-[#333333] font-[400] font-inter">{item.date}</span>
                 {/* Increased Tag Font Size */}
-                <span className="bg-[#E8E4E4] text-[#4C4C4C] font-[400] font-inter text-[14px] px-8 py-1 rounded-full font-medium">
+                <span className="bg-[#E8E4E4] text-[#4C4C4C] font-[400] font-inter text-[10px] sm:text-[13px] md:text-[14px] px-6 sm:px-6 md:px-8 py-0.5 rounded-full font-medium">
                   {item.tag}
                 </span>
               </div>
 
-              <h3 className="text-[20px] md:text-[22px] text-[#333333] font-medium leading-relaxed group-hover:text-[#FFA500] transition-colors">
+              <h3 className="text-[13px] sm:text-[15px] md:text-[18px] lg:text-[20px] text-[#333333] font-[500] leading-relaxed group-hover:text-[#FFA500] transition-colors truncate sm:whitespace-normal sm:overflow-visible sm:text-clip">
                 {item.title}
               </h3>
             </div>
@@ -60,8 +60,8 @@ export default function News() {
         </div>
 
         {/* View More Button */}
-        <div className="text-center mt-16">
-          <button className="bg-[#FFA500] text-white px-40 py-4  rounded-full font-bold text-[20px] hover:bg-[#e69500] transition-all shadow-md">
+        <div className="text-center mt-5 sm:mt-12 md:mt-16 mb-8 md:mb-0">
+          <button className="bg-[#FFA500] text-white px-16 sm:px-16 md:px-24 lg:px-32 xl:px-40 py-2.5 sm:py-3.5 md:py-4 rounded-full font-bold text-[16px] sm:text-[18px] md:text-[20px] hover:bg-[#e69500] transition-all shadow-md">
             もっとみる
           </button>
         </div>

@@ -29,29 +29,24 @@ export default function MarketInfo() {
   ];
 
   return (
-    <div className="px-4 px-40 py-24 font-sans">
+    <div className="px-4 sm:px-6 md:px-12 lg:px-24 xl:px-40 py-20 sm:py-16 md:py-24 font-sans">
       <div className="">
 
         {/* Header Section */}
-        <div className="text-center mb-16">
+        <div className="text-center mb-8 sm:mb-12 md:mb-16">
           <div className="relative inline-block mb-2">
-            {/* Orange Badge */}
-            {/* <div className="absolute -top-10 left-1/2 -translate-x-1/2 bg-[#FFA500] text-white px-4 py-1 rounded-full text-sm font-bold flex items-center justify-center after:content-[''] after:absolute after:top-full after:left-1/2 after:-translate-x-1/2 after:border-8 after:border-transparent after:border-t-[#FFA500]">
-              ちょこっと
-            </div> */}
-
-            <div className='absolute -top-12 left-[40%] -translate-x-1/2'>
-              <img src="/icons/cloud.svg" alt="" className='h-12'/>
-              <p className='text-[16px] font-inter font-[600] text-white relative z-10 -top-9.5'>ちょこっと</p>
+            <div className='absolute -top-13 sm:-top-10 md:-top-12 left-[50%] sm:left-[38%] md:left-[40%] -translate-x-1/2'>
+              <img src="/icons/cloud.svg" alt="" className='h-12 sm:h-10 md:h-12' />
+              <p className='text-[16px] sm:text-[14px] md:text-[16px] font-inter font-[600] text-white relative z-10 -top-9 sm:-top-8 md:-top-9.5 text-center'>ちょこっと</p>
             </div>
 
             {/* Title with Brush Stroke Underline */}
             <div className="relative">
-              <h2 className="text-[32px] md:text-[36px] font-bold text-[#4C4C4C] relative z-10">
+              <h2 className="text-[18px] sm:text-[28px] md:text-[32px] lg:text-[36px] font-bold text-[#4C4C4C] relative z-10">
                 知っておくと得するマーケット情報
               </h2>
               <svg
-                className="absolute bottom-3 left-0 w-full h-[12px] z-0 opacity-80 -mt-10 md:-mt-7"
+                className="absolute bottom-1 sm:bottom-2 md:bottom-3 left-0 w-full h-[8px] sm:h-[10px] md:h-[12px] z-0 opacity-80 -mt-6 sm:-mt-8 md:-mt-10 lg:-mt-7"
                 viewBox="0 0 218 16"
                 fill="none"
                 preserveAspectRatio="none"
@@ -64,16 +59,16 @@ export default function MarketInfo() {
         </div>
 
         {/* Content Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
-          {marketData.map((item) => (
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-0 md:gap-2">
+          {marketData.map((item, index) => (
             <div
               key={item.id}
-              className="bg-white rounded-xl pb-12 shadow-sm border border-gray-50 flex flex-col justify-between hover:shadow-md transition-shadow"
+              className={`bg-white ${index < marketData.length - 1 ? 'border-b border-gray-200 md:border-b-0' : ''} ${index === 0 ? 'md:border-r border-gray-200' : ''} ${index === 1 ? 'md:border-b border-gray-200' : ''} ${index === 2 ? 'md:border-r border-gray-200' : ''} rounded-none md:rounded-xl pb-6 sm:pb-8 md:pb-12 shadow-none md:shadow-sm md:border md:border-gray-50 flex flex-col justify-between hover:shadow-md transition-shadow`}
             >
               <div className=''>
-                <div className="flex justify-between items-center px-6">
+                <div className="flex justify-between items-start px-4 sm:px-5 md:px-6 pt-4 sm:pt-5 md:pt-6">
                   {/* Icon */}
-                  <div className="h-22">
+                  <div className="h-16 w-16 sm:h-20 sm:w-20 md:h-22 md:w-22 flex-shrink-0">
                     <img
                       src={item.image}
                       alt={item.title}
@@ -82,19 +77,19 @@ export default function MarketInfo() {
                   </div>
 
                   {/* Button */}
-                  <div className=''>
-                    <button className='border border-[#E5E5E5] text-[#909090] font-inter font-[900] rounded-sm px-4 py-2.5 text-[13px] flex items-center gap-3'>
+                  <div className='flex-shrink-0'>
+                    <button className={`${index === 0 ? 'border border-blue-500 text-blue-500' : 'border border-[#E5E5E5] text-[#909090]'} font-inter font-[900] rounded-sm px-3 sm:px-3.5 md:px-4 py-1.5 sm:py-2 md:py-2.5 text-[11px] sm:text-[12px] md:text-[13px] flex items-center gap-2 sm:gap-2.5 md:gap-3`}>
                       詳しく見る
-                      <img src="/icons/right-arrow.svg" alt="" className='h-2' />
+                      <img src="/icons/right-arrow.svg" alt="" className='h-1.5 sm:h-1.5 md:h-2' />
                     </button>
                   </div>
                 </div>
 
                 {/* Text Content */}
-                <h3 className="text-[20px] font-bold font-inter text-[#4C4C4C] mb-1.5 px-8">
+                <h3 className="text-[16px] sm:text-[18px] md:text-[20px] font-bold font-inter text-[#4C4C4C] mb-1 sm:mb-1.5 px-4 sm:px-6 md:px-8">
                   {item.title}
                 </h3>
-                <p className="text-[#4C4C4C] text-[12px] font-inter font-[500] leading-relaxed pl-8 pr-4">
+                <p className="text-[#4C4C4C] text-[11px] sm:text-[11.5px] md:text-[12px] font-inter font-[500] leading-relaxed pl-4 sm:pl-6 md:pl-8 pr-4 sm:pr-6 md:pr-4">
                   {item.description}
                 </p>
               </div>
