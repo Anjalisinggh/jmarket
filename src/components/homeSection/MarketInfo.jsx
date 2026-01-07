@@ -1,3 +1,4 @@
+'use client'
 import React from 'react';
 
 export default function MarketInfo() {
@@ -35,7 +36,7 @@ export default function MarketInfo() {
         {/* Header Section */}
         <div className="text-center mb-8 sm:mb-12 md:mb-16">
           <div className="relative inline-block mb-2">
-            <div className='absolute -top-13 sm:-top-10 md:-top-12 left-[50%] sm:left-[38%] md:left-[40%] -translate-x-1/2'>
+            <div className='absolute -top-13 sm:-top-10 md:-top-12 left-[50%] sm:left-[38%] md:left-[40%] -translate-x-1/2 animate-cloud-float'>
               <img src="/icons/cloud.svg" alt="" className='h-12 sm:h-10 md:h-12' />
               <p className='text-[16px] sm:text-[14px] md:text-[16px] font-inter font-[600] text-white relative z-10 -top-9 sm:-top-8 md:-top-9.5 text-center'>ちょこっと</p>
             </div>
@@ -72,15 +73,15 @@ export default function MarketInfo() {
                     <img
                       src={item.image}
                       alt={item.title}
-                      className="w-full h-full object-contain"
+                      className="w-full h-full object-contain transition-transform duration-300 hover:scale-110"
                     />
                   </div>
 
                   {/* Button */}
                   <div className='flex-shrink-0'>
-                    <button className={`border border-[#E5E5E5] text-[#909090] font-inter font-[900] rounded-sm px-3 sm:px-3.5 md:px-4 py-1.5 sm:py-2 md:py-2.5 text-[11px] sm:text-[12px] md:text-[13px] flex items-center gap-2 sm:gap-2.5 md:gap-3`}>
+                    <button className={`border border-[#E5E5E5] text-[#909090] font-inter font-[900] rounded-sm px-3 sm:px-3.5 md:px-4 py-1.5 sm:py-2 md:py-2.5 text-[11px] sm:text-[12px] md:text-[13px] flex items-center gap-2 sm:gap-2.5 md:gap-3 transition-all duration-300 hover:border-[#FFA500] hover:text-[#FFA500] hover:shadow-md cursor-pointer group`}>
                       詳しく見る
-                      <img src="/icons/right-arrow.svg" alt="" className='h-1.5 sm:h-1.5 md:h-2' />
+                      <img src="/icons/right-arrow.svg" alt="" className='h-1.5 sm:h-1.5 md:h-2 transition-transform duration-300 group-hover:translate-x-1' />
                     </button>
                   </div>
                 </div>
@@ -105,7 +106,7 @@ export default function MarketInfo() {
               className={`bg-white border border-gray-200 rounded-xl py-4 shadow-none md:shadow-sm md:border md:border-gray-50 flex flex-col justify-between hover:shadow-md transition-shadow`}
             >
               <div className='flex items-start gap-2'>
-                <img src={item.image} alt="" className='h-[80px] mt-4' />
+                <img src={item.image} alt="" className='h-[80px] mt-4 transition-transform duration-300 hover:scale-110' />
                 <div>
                   {/* Text Content */}
                   <h3 className="text-[16px] sm:text-[18px] md:text-[20px] font-bold font-inter text-[#4C4C4C] mb-1">
@@ -117,9 +118,9 @@ export default function MarketInfo() {
                 </div>
               </div>
               <div className='flex-shrink-0 w-full flex justify-center mt-3'>
-                <button className={`border border-[#E5E5E5] text-[#909090] font-inter font-[900] rounded-sm px-3 sm:px-3.5 md:px-4 py-1.5 sm:py-2 md:py-2.5 text-[11px] sm:text-[12px] md:text-[13px] flex items-center gap-2 sm:gap-2.5 md:gap-3`}>
+                <button className={`border border-[#E5E5E5] text-[#909090] font-inter font-[900] rounded-sm px-3 sm:px-3.5 md:px-4 py-1.5 sm:py-2 md:py-2.5 text-[11px] sm:text-[12px] md:text-[13px] flex items-center gap-2 sm:gap-2.5 md:gap-3 transition-all duration-300 hover:border-[#FFA500] hover:text-[#FFA500] hover:shadow-md cursor-pointer group`}>
                   詳しく見る
-                  <img src="/icons/right-arrow.svg" alt="" className='h-1.5 sm:h-1.5 md:h-2' />
+                  <img src="/icons/right-arrow.svg" alt="" className='h-1.5 sm:h-1.5 md:h-2 transition-transform duration-300 group-hover:translate-x-1' />
                 </button>
               </div>
             </div>
@@ -127,6 +128,19 @@ export default function MarketInfo() {
         </div>
 
       </div>
+      <style jsx global>{`
+        @keyframes cloudFloat {
+          0%, 100% {
+            transform: translate(-50%, 0);
+          }
+          50% {
+            transform: translate(-50%, -8px);
+          }
+        }
+        .animate-cloud-float {
+          animation: cloudFloat 2.5s ease-in-out infinite;
+        }
+      `}</style>
     </div>
   );
 }

@@ -1,3 +1,4 @@
+'use client'
 import React from 'react';
 
 export default function AccountOpening() {
@@ -53,7 +54,7 @@ export default function AccountOpening() {
 
                             {/* Step 3 Campaign Badge */}
                             {item.hasBadge && (
-                                <img src="/icons/stepcloud.svg" alt="whychoose1" className="absolute md:-top-14 -top-6 md:-right-18 -right-4 w-full md:h-[85px] h-[58px] z-0" />
+                                <img src="/icons/stepcloud.svg" alt="whychoose1" className="absolute md:-top-14 -top-6 md:-right-18 -right-4 w-full md:h-[85px] h-[58px] z-0 animate-badge-float" />
                             )}
 
                             {/* Illustration */}
@@ -69,12 +70,25 @@ export default function AccountOpening() {
                         新規口座開設＋条件達成で<span className="text-[#00D084] font-bold md:text-[24px] text-[20px]">5,000円</span>プレゼント
                     </p>
 
-                    <button className="w-full bg-[#FFA500] tracking-[1.5px] hover:bg-[#e69500] transition-colors text-white md:text-[20px] text-[14px] font-[600] md:py-4 py-3 px-8 rounded-full shadow-md font-inter">
+                    <button className="w-full bg-[#FFA500] tracking-[1.5px] hover:bg-[#e69500] transition-all duration-300 text-white md:text-[20px] text-[14px] font-[600] md:py-4 py-3 px-8 rounded-full shadow-md hover:shadow-lg cursor-pointer">
                         無料新規口座開設はこちら
                     </button>
                 </div>
 
             </div>
+            <style jsx global>{`
+                @keyframes badgeFloat {
+                    0%, 100% {
+                        transform: translateY(0);
+                    }
+                    50% {
+                        transform: translateY(-10px);
+                    }
+                }
+                .animate-badge-float {
+                    animation: badgeFloat 2s ease-in-out infinite;
+                }
+            `}</style>
         </div>
     );
 }

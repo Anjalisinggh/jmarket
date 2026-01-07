@@ -63,7 +63,7 @@ export default function Support() {
 
         {/* Support Methods Grid */}
         <div className="grid grid-cols-3 gap-1 sm:gap-5 md:gap-6 mt-6 sm:mt-8 md:mt-10">
-          <div className="relative bg-[#F5F5F5] rounded-sm px-1 sm:px-5 pt-2 pb-5 sm:py-4 md:py-5 flex flex-col items-center text-center">
+          <div className="relative bg-[#F5F5F5] rounded-sm px-1 sm:px-5 pt-2 pb-5 sm:py-4 md:py-5 flex flex-col items-center text-center transition-all duration-300 hover:shadow-lg hover:scale-[1.02] cursor-pointer">
             <div className="relative md:mb-1 sm:mb-2 inline-block">
               <span className="text-[15px] sm:text-[32px] md:text-[40px] font-[700] tracking-[1px] text-[#000000] relative z-10">
                 TEL
@@ -83,7 +83,7 @@ export default function Support() {
             <img src="/icons/tel.svg" alt="" className='absolute top-[17%] md:top-[30%] left-1/2 -translate-x-1/2 right-0 h-[70px] md:h-[150px]' />
           </div>
 
-          <div className="relative bg-[#F5F5F5] rounded-sm px-1 sm:px-5 pt-2 pb-5 sm:py-4 md:py-5 flex flex-col items-center text-center">
+          <div className="relative bg-[#F5F5F5] rounded-sm px-1 sm:px-5 pt-2 pb-5 sm:py-4 md:py-5 flex flex-col items-center text-center transition-all duration-300 hover:shadow-lg hover:scale-[1.02] cursor-pointer">
             <div className="relative md:mb-1 sm:mb-2 inline-block">
               <span className="text-[15px] sm:text-[32px] md:text-[40px] font-[700] tracking-[1px] text-[#000000] relative z-10">
                 MAIL
@@ -106,7 +106,7 @@ export default function Support() {
             <img src="/icons/mail.svg" alt="" className='absolute top-[17%] md:top-[35%] left-1/2 -translate-x-1/2 right-0 h-[65px] md:h-[130px]' />
           </div>
 
-          <div className="relative bg-[#F5F5F5] rounded-sm px-1 sm:px-5 pt-2 pb-5 sm:py-4 md:py-5 flex flex-col items-center text-center">
+          <div className="relative bg-[#F5F5F5] rounded-sm px-1 sm:px-5 pt-2 pb-5 sm:py-4 md:py-5 flex flex-col items-center text-center transition-all duration-300 hover:shadow-lg hover:scale-[1.02] cursor-pointer">
             <div className="relative md:mb-1 sm:mb-2 inline-block">
               <span className="text-[15px] sm:text-[32px] md:text-[40px] font-[700] tracking-[1px] text-[#000000] relative z-10">
                 LINE
@@ -122,7 +122,7 @@ export default function Support() {
               </svg>
             </div>
             <p className="text-[10px] sm:text-[14px] md:text-[15px] font-inter font-[500] text-[#000] mb-1 sm:mb-2 md:mb-3 hidden sm:block">ヘルプセンター</p>
-            <button className={`mt-13 md:mt-32 bg-[#06C755] hover:bg-[#05b34c] text-white px-4 md:px-0 sm:w-4/5 md:w-4/5 py-1 sm:py-3 md:py-3.5 rounded-sm md:rounded-md font-bold text-[10px] sm:text-[15px] md:text-[16px] flex items-center justify-center gap-1 sm:gap-2 transition-colors md:mt-5`}>
+            <button className={` mt-13 md:mt-32 bg-[#06C755] hover:bg-[#05b34c] text-white px-4 md:px-0 sm:w-4/5 md:w-4/5 py-1 sm:py-3 md:py-3.5 rounded-sm md:rounded-md font-bold text-[10px] sm:text-[15px] md:text-[16px] flex items-center justify-center gap-1 sm:gap-2 transition-colors md:mt-5`}>
               <span className="sm:hidden">友達追加</span>
               <span className="hidden sm:inline">ラインを追加する</span>
               <img src="/icons/white-arrow-right.svg" alt="" className='h-1.5 sm:h-2' />

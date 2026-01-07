@@ -3,7 +3,7 @@ export default function AppDownloadSection() {
     <div className="md:px-40 px-4 md:pt-5 pt-3 pb-5 bg-white ">
       <div className="grid md:grid-cols-2 grid-cols-1 md:gap-10 gap-4">
         {/* Left Card - Spread and Cost Information */}
-        <div className="bg-[#F8F9FA] rounded-2xl md:p-10 p-4 pb-0">
+        <div className="bg-[#F8F9FA] rounded-2xl md:p-10 md:pb-0 p-4 pb-0 transition-all duration-300 hover:shadow-lg hover:scale-[1.02] cursor-pointer">
           <h3 className="md:text-[30px] text-[20px] font-bold leading-relaxed mb-6 text-[#4C4C4C]">
             <span className="relative inline-block">
               <span className="z-50 relative">
@@ -50,7 +50,7 @@ export default function AppDownloadSection() {
         </div>
 
         {/* Right Card - Mobile App Information */}
-        <div className="bg-[#F8F9FA] rounded-2xl md:p-10 p-4 relative overflow-visible h-[450px] md:h-auto">
+        <div className="bg-[#F8F9FA] rounded-2xl md:p-10 md:pb-0 p-4 relative overflow-visible h-[450px] md:h-auto transition-all duration-300 hover:shadow-lg hover:scale-[1.02] cursor-pointer">
           <div>
             <h3 className="md:text-[30px] text-[22px] font-[500] leading-relaxed mb-6 text-[#4C4C4C]">
               Meta Traderモバイルアプリで<br />

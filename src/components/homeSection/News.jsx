@@ -21,7 +21,7 @@ export default function News() {
         <div className="flex border-b-2 border-gray-100 mb-8 sm:mb-12 md:mb-16">
           <button
             onClick={() => setActiveTab('announcements')}
-            className={`flex-1 pb-2 px-2 sm:px-4 md:px-6 text-[16px] sm:text-[20px] md:text-[24px] lg:text-[28px] font-bold transition-all relative rounded-lg ${activeTab === 'announcements' ? 'text-[#FFA500]' : 'text-[#B7B7B7]'}`}
+            className={`flex-1 pb-2 px-2 sm:px-4 md:px-6 text-[16px] sm:text-[20px] md:text-[24px] lg:text-[28px] font-bold transition-all relative rounded-lg cursor-pointer ${activeTab === 'announcements' ? 'text-[#FFA500]' : 'text-[#B7B7B7]'}`}
           >
             お知らせ
             {activeTab === 'announcements' && (
@@ -30,7 +30,7 @@ export default function News() {
           </button>
           <button
             onClick={() => setActiveTab('press')}
-            className={`flex-1 pb-2 px-2 sm:px-4 md:px-6 text-[16px] sm:text-[20px] md:text-[24px] lg:text-[28px] font-bold transition-all relative ${activeTab === 'press' ? 'text-[#FFA500]' : 'text-[#B7B7B7]'}`}
+            className={`flex-1 pb-2 px-2 sm:px-4 md:px-6 text-[16px] sm:text-[20px] md:text-[24px] lg:text-[28px] font-bold transition-all relative cursor-pointer ${activeTab === 'press' ? 'text-[#FFA500]' : 'text-[#B7B7B7]'}`}
           >
             プレスリリース
             {activeTab === 'press' && (
@@ -61,7 +61,7 @@ export default function News() {
 
         {/* View More Button */}
         <div className="text-center mt-5 sm:mt-12 md:mt-16 mb-8 md:mb-0">
-          <button className="bg-[#FFA500] text-white px-16 sm:px-16 md:px-24 lg:px-32 xl:px-40 py-2.5 sm:py-3.5 md:py-4 rounded-full font-bold text-[16px] sm:text-[18px] md:text-[20px] hover:bg-[#e69500] transition-all shadow-md">
+          <button className="cursor-pointer bg-[#FFA500] text-white px-16 sm:px-16 md:px-24 lg:px-32 xl:px-40 py-2.5 sm:py-3.5 md:py-4 rounded-full font-bold text-[16px] sm:text-[18px] md:text-[20px] hover:bg-[#e69500] transition-all shadow-md">
             もっとみる
           </button>
         </div>

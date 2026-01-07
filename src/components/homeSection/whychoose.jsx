@@ -39,7 +39,7 @@ export default function WhyChoose() {
 
             <div className="grid md:grid-cols-2 grid-cols-1 md:gap-10 gap-4">
                 {/* Left Card */}
-                <div className="bg-[#F8F9FA] rounded-2xl md:p-10 p-4 pb-0 flex flex-col justify-between overflow-hidden">
+                <div className="bg-[#F8F9FA] rounded-2xl md:p-10 md:pb-0 p-4 pb-0 flex flex-col justify-between overflow-hidden transition-all duration-300 hover:shadow-lg hover:scale-[1.02] cursor-pointer">
                     <div>
                         <h3 className="md:text-[28px] text-[20px] font-bold leading-relaxed mb-6 text-[#4C4C4C]">
                             <span className="relative inline-block">
@@ -71,7 +71,7 @@ export default function WhyChoose() {
                 </div>
 
                 {/* Right Card */}
-                <div className="bg-[#F8F9FA] rounded-2xl md:p-10 p-4 pb-5">
+                <div className="bg-[#F8F9FA] rounded-2xl md:p-10 md:pb-0 p-4 pb-5 transition-all duration-300 hover:shadow-lg hover:scale-[1.02] cursor-pointer">
                     <h3 className="md:text-[28px] text-[20px] font-bold leading-relaxed mb-6 text-[#4C4C4C]">
                         とにかくCFD取引が、<br />
                         <span className="relative inline-block">

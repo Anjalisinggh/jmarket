@@ -68,15 +68,15 @@ export default function FNQSection() {
                 </p>
 
                 <div className='mb-10'>
-                  <button className='border border-[#E5E5E5] text-[#909090] font-inter font-[900] mt-10 rounded-sm px-4 py-2.5 text-[13px] flex items-center gap-3'>
+                  <button className='border border-[#E5E5E5] text-[#909090] font-inter font-[900] mt-10 rounded-sm px-4 py-2.5 text-[13px] flex items-center gap-3 transition-all duration-300 hover:border-[#FFA500] hover:text-[#FFA500] hover:shadow-md cursor-pointer group'>
                     詳しく見る
-                    <img src="/icons/right-arrow.svg" alt="" className='h-2' />
+                    <img src="/icons/right-arrow.svg" alt="" className='h-2 transition-transform duration-300 group-hover:translate-x-1' />
                   </button>
                 </div>
               </div>
 
               <div className='absolute md:w-[150px] w-[130px] md:h-[150px] h-[130px] right-5 bottom-5'>
-                <img src={item.image} alt="" className='w-full h-full object-contain' />
+                <img src={item.image} alt="" className='w-full h-full object-contain transition-transform duration-300 hover:scale-110' />
               </div>
 
             </div>
