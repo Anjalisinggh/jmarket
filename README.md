@@ -1,37 +1,59 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# JMarkets
+
+A responsive landing page for **JMarkets**, a Japanese-language online trading platform for financial markets (FX and CFDs). It's built with Next.js and animated with GSAP.
+
+## Overview
+
+The page takes new traders from "what is this?" to "open an account":
+
+- **Hero & banner**: headline offer and call-to-action
+- **Why choose us**: the platform's key strengths
+- **App download**: mobile trading app promo
+- **Execution**: trade execution quality and speed
+- **Account opening**: step-by-step sign-up flow
+- **Market info**: economic calendar, market news, analysis and a glossary of beginner terms (pips, spread, margin, stop-out)
+- **Support, News & FAQ**: help channels, announcements and common questions
+- **Risk disclaimer**: required trading risk notice
+
+## Features
+
+- Scroll-triggered animations with **GSAP**
+- Fully responsive layout using **react-responsive** breakpoints
+- Utility-first styling with **Tailwind CSS v4**
+- Icons from **lucide-react**
+
+## Tech Stack
+
+| | |
+|---|---|
+| Framework | Next.js 16 (App Router), React 19 |
+| Styling | Tailwind CSS 4 |
+| Animation | GSAP |
+| Icons | lucide-react |
+
+## Project Structure
+
+```
+src/
+├── app/                  # Root layout, global styles, entry page
+├── pages/Home.jsx        # Assembles all home sections
+├── components/
+│   ├── layout/           # Navbar, Footer
+│   └── homeSection/      # Hero, WhyChoose, MarketInfo, FAQ, …
+└── utils/scrollAnimations.js
+```
 
 ## Getting Started
 
-First, run the development server:
-
 ```bash
+git clone https://github.com/Anjalisinggh/jmarket.git
+cd jmarket
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000).
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+## Author
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
-# jmarket
+**Anjali Singh**: [GitHub](https://github.com/Anjalisinggh) · [Portfolio](https://anjali.monster) · [LinkedIn](https://www.linkedin.com/in/anjali-singh-82bb42302)
